@@ -76,7 +76,7 @@ param_grid = [
 ]
 
 # Realizando a busca por hiperparâmetros com GridSearchCV
-grid_search = GridSearchCV(pipeline, param_grid, cv=5, n_jobs=-1, scoring="accuracy")
+grid_search = GridSearchCV(pipeline, param_grid, cv=5, n_jobs=1, scoring="accuracy")
 grid_search.fit(X_train, y_train)
 
 # Mostrando os melhores parâmetros e modelo
